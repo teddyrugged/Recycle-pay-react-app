@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button } from 'src/components';
+import { Button } from 'components';
 
-export const SignUpPage = () => {
-  return (
-    <div>
-      <Button btnType="primary" text="Click Me" />
-    </div>
-  );
-};
+export const SignUpPage = () => (
+  <div>
+    Sign Up Page
+    <Button btnType="primary" text="Click Me" />
+  </div>
+);

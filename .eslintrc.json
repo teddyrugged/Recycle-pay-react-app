@@ -5,7 +5,8 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,9 +16,11 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-curly-newline": "off",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
@@ -25,7 +28,23 @@
     "import/no-unresolved": "off",
     "prefer-destructuring": "off",
     "react/state-in-constructor": "off",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "consistent-return": "off",
-    "react/require-default-props": "off"
-  }
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "prefer-arrow-callback": [ "error", { "allowNamedFunctions": true } ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.spec.js",
+        "**/*.test.js",
+        "**/*.spec.jsx",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

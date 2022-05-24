@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = (props) => {
-  return <button>{children}</button>;
-};
+export const Button = ({ text, children }) => <button type="button">{text || children}</button>;
 
 Button.propTypes = {
+  children: PropTypes.node.isRequired,
   text: PropTypes.string,
-  btnType: PropTypes.string.isRequired,
 };
