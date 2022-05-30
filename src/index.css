@@ -1,9 +1,14 @@
 :root {
+  /*COLORS*/
   --white: #ffffff;
-  /*colors*/
+  /*primary*/
   --primary-main: #04a405;
   --primary-10: #ebfeeb;
   --primary-80: #025002;
+
+  /*neutral*/
+  --neutral-60: #18181899;
+  --neutral-70: #181818b2;
 }
 
 * {
