@@ -1,0 +1,18 @@
+.dash-navbar {
+  height: 75px;
+  background-color: #04a405;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+}
+
+.name-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #fef7ec;
+  border-radius: 50%;
+}
