@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 
-export const Text = ({ text, size, weight, children }) => (
-  <p style={{ fontSize: size ?? 16, fontWeight: weight ?? 450 }} className={clsx()}>
+export const Text = ({ text, size, weight, children, style }) => (
+  <p style={{ fontSize: size ?? 16, fontWeight: weight ?? 450 }} className={style}>
     {text || children}
   </p>
 );
