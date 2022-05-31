@@ -4,7 +4,7 @@ import { Text } from '../../elements';
 export const DashHeader = () => (
   <div className="dash-navbar">
     <div>Hello</div>
-    <div>
+    <div className="name-holder">
       <Text text="Hello Dash" />
       <span className="name-icon">Y</span>
     </div>

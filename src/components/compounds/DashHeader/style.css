@@ -3,7 +3,7 @@
   background-color: #04a405;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem 2rem;
 }
 
@@ -15,4 +15,14 @@
   width: 30px;
   background-color: #fef7ec;
   border-radius: 50%;
+}
+.name-holder {
+  display: flex;
+  min-width: 150px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name-holder p {
+  color: white;
 }
