@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classes from './style.css';
 
-const PickupSnipet = ({ title, text }) => (
+export const PickupSnipet = ({ title, text }) => (
   <div className={classes.container}>
     <div className={classes.wrapper}>
       <p>{title}</p>
