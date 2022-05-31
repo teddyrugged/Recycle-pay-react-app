@@ -40,11 +40,24 @@ export const SignUpPage = () => (
       </div>
     </div>
     <hr />
-    <div style={{ display: 'flex', padding: 20, flexWrap: 'wrap', gap: 20 }}>
-      <Input />
-      <Input round />
-      <Input round type="password" />
-      <Input fullRound />
+    <div style={{ display: 'flex', flexDirection: 'column', padding: 20, flexWrap: 'wrap', gap: 20 }}>
+      <p>First Name</p>
+      <Input inputType="sm-form-input form-input" styleType="left-round" type="text" placeholder="First Name" />
+      <p>Last Name</p>
+      <Input inputType="sm-form-input form-input" styleType="right-round" placeholder="Last Name" />
+      <p>Email Address</p>
+      <Input inputType="lg-form-input form-input" styleType="full-round" type="email" placeholder="Email" />
+      <p>Phone Number</p>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
+        <Input inputType="xs-form-input form-input" styleType="left-round" type="text" value="+234" disabled />
+        <Input
+          inputType="md-form-input form-input"
+          styleType="right-round"
+          type="tel"
+          pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+          placeholder="08000000000"
+        />
+      </div>
     </div>
   </div>
 );
