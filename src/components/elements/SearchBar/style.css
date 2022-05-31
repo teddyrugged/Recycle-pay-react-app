@@ -8,6 +8,7 @@
 .search-holder input {
   border: none;
   font-size: 12px;
+  width: 80%;
 }
 
 .search-holder input:focus {
