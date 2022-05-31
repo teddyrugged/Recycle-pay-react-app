@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text } from 'components';
+import { Button, Text, Input } from 'components';
 
 export const SignUpPage = () => (
   <div
@@ -38,6 +38,13 @@ export const SignUpPage = () => (
 
         <Text.Heading size={40} weight={500} text="Hey there I am a heading 2" />
       </div>
+    </div>
+    <hr />
+    <div style={{ display: 'flex', padding: 20, flexWrap: 'wrap', gap: 20 }}>
+      <Input />
+      <Input round />
+      <Input round type="password" />
+      <Input fullRound />
     </div>
   </div>
 );

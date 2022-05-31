@@ -1,0 +1,32 @@
+.input-base {
+  width: 488px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid rgba(2, 80, 2, 0.2);
+}
+
+.input-base:active,
+.input-base:hover,
+.input-base:focus {
+  border: 1px solid rgba(4, 149, 4, 1);
+}
+
+.round {
+  border-radius: 11px;
+}
+
+.fullRound {
+  border-radius: 23px;
+}
+
+.form-input {
+  padding: 23px 50px;
+}
+
+.form-input-phone {
+  padding: 23px 50px;
+}
+
+.search-input {
+  padding: 23px 50px;
+}
