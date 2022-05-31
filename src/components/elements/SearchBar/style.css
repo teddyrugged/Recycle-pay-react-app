@@ -2,9 +2,12 @@
   background-color: #fff;
   border-radius: 20px;
   padding: 10px;
+  min-width: 300px;
+  color: #04a405;
 }
 .search-holder input {
   border: none;
+  font-size: 12px;
 }
 
 .search-holder input:focus {

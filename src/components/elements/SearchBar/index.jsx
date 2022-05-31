@@ -4,6 +4,6 @@ export const SearchBar = () => (
   <div className="search-holder">
     <i className="fa fa-search" />
     <span className="h-space" />
-    <input />
+    <input placeholder="e.g Search ID 16256" />
   </div>
 );
