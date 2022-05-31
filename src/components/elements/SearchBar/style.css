@@ -1,0 +1,12 @@
+.search-holder {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+.search-holder input {
+  border: none;
+}
+
+.search-holder input:focus {
+  outline: none;
+}
