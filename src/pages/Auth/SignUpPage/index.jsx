@@ -41,10 +41,16 @@ export const SignUpPage = () => (
     </div>
     <hr />
     <div style={{ display: 'flex', flexDirection: 'column', padding: 20, flexWrap: 'wrap', gap: 20 }}>
-      <p>First Name</p>
-      <Input inputType="sm-form-input form-input" styleType="left-round" type="text" placeholder="First Name" />
-      <p>Last Name</p>
-      <Input inputType="sm-form-input form-input" styleType="right-round" placeholder="Last Name" />
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div>
+          <p style={{ margin: '0px 0px 10px 10px' }}>First Name</p>
+          <Input inputType="sm-form-input form-input" styleType="left-round" type="text" placeholder="First Name" />
+        </div>
+        <div>
+          <p style={{ margin: '0px 0px 10px 10px' }}>Last Name</p>
+          <Input inputType="sm-form-input form-input" styleType="right-round" placeholder="Last Name" />
+        </div>
+      </div>
       <p>Email Address</p>
       <Input inputType="lg-form-input form-input" styleType="full-round" type="email" placeholder="Email" />
       <p>Phone Number</p>
