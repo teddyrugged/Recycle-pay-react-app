@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 export const Input = ({ inputType, styleType, type, pattern, placeholder, ...props }) => (
   <input
-    className={clsx(`${inputType || 'lg-form-input'} ${styleType}`, [])}
+    className={clsx(`${inputType || 'lg-form-input'} ${styleType}`, ['form-input'])}
     type={type || 'text'}
     placeholder={placeholder}
     {...props}
@@ -13,8 +13,8 @@ export const Input = ({ inputType, styleType, type, pattern, placeholder, ...pro
 );
 
 Input.propTypes = {
-  inputType: PropTypes.oneOf(['xs-form-input', 'sm-form-input', 'md-form-input', 'lg-form-input']),
-  styleType: PropTypes.oneOf(['left-round', 'right-round', 'full-round']),
+  inputType: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+  styleType: PropTypes.oneOf(['l-round', 'r-round', 'full-round', 'le-round', 're-round']),
   type: PropTypes.oneOf(['text', 'tel', 'password', 'email', 'search', 'url']),
   pattern: PropTypes.string,
   placeholder: PropTypes.string,

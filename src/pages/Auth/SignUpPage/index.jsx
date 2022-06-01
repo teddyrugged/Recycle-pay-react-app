@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Text, Input } from 'components';
+import { BiSearch } from 'react-icons/bi';
+import { TbMinusVertical } from 'react-icons/tb';
 
 export const SignUpPage = () => (
   <div
@@ -40,29 +42,41 @@ export const SignUpPage = () => (
       </div>
     </div>
     <hr />
-    <div style={{ display: 'flex', flexDirection: 'column', padding: 20, flexWrap: 'wrap', gap: 20 }}>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <br />
+    <br />
+    <br />
+    <div className="wrapper">
+      <div className="wrapper--title">
+        <h1>Sign Up</h1>
+      </div>
+      <div className="wrapper--name">
         <div>
           <p style={{ margin: '0px 0px 10px 10px' }}>First Name</p>
-          <Input inputType="sm-form-input form-input" styleType="left-round" type="text" placeholder="First Name" />
+          <Input inputType="sm" styleType="l-round" type="text" placeholder="First Name" />
         </div>
         <div>
           <p style={{ margin: '0px 0px 10px 10px' }}>Last Name</p>
-          <Input inputType="sm-form-input form-input" styleType="right-round" placeholder="Last Name" />
+          <Input inputType="sm" styleType="r-round" placeholder="Last Name" />
         </div>
       </div>
-      <p>Email Address</p>
-      <Input inputType="lg-form-input form-input" styleType="full-round" type="email" placeholder="Email" />
-      <p>Phone Number</p>
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
-        <Input inputType="xs-form-input form-input" styleType="left-round" type="text" value="+234" disabled />
+      <p style={{ margin: '0 0 -10px 10px' }}>Email Address</p>
+      <Input inputType="lg" styleType="full-round" type="email" placeholder="Email" />
+      <p style={{ margin: '0 0 -10px 10px' }}>Phone Number</p>
+      <div className="flex-div relative">
+        <p className="phone absolute">+234</p>
+        <TbMinusVertical className="line absolute" size={50} />
         <Input
-          inputType="md-form-input form-input"
-          styleType="right-round"
+          style={{ paddingLeft: 70 }}
+          inputType="lg"
+          styleType="full-round"
           type="tel"
           pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
           placeholder="08000000000"
         />
+      </div>
+      <div className="flex-div relative">
+        <BiSearch size={25} color="#04A405" className="bi-search absolute" />
+        <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
   </div>
