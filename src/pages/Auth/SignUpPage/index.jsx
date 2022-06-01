@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Text } from 'components';
+import './signup.css';
 
 export const SignUpPage = () => (
   <div
@@ -7,7 +8,15 @@ export const SignUpPage = () => (
       padding: 20,
     }}
   >
-    Sign Up Page
+    <div className="nav-container">
+      <nav>
+        <h1>Recycle pay</h1>
+      </nav>
+
+      <div className="form-container">
+        <h1>Form Content</h1>
+      </div>
+    </div>
     <br />
     <br />
     <br />
