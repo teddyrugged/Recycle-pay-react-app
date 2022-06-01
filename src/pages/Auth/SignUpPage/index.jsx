@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Text, Input } from 'components';
 import { BiSearch } from 'react-icons/bi';
 import { TbMinusVertical } from 'react-icons/tb';
+import { AuthLayout } from 'layouts';
 
 export const SignUpPage = () => (
   <div
@@ -9,7 +10,9 @@ export const SignUpPage = () => (
       padding: 20,
     }}
   >
-    Sign Up Page
+    <AuthLayout>
+      <Button text="Yes" />
+    </AuthLayout>
     <br />
     <br />
     <br />
