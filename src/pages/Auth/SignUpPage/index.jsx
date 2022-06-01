@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Text } from 'components';
-import './signup.css';
+import { AuthLayout } from 'layouts';
 
 export const SignUpPage = () => (
   <div
@@ -8,15 +8,9 @@ export const SignUpPage = () => (
       padding: 20,
     }}
   >
-    <div className="nav-container">
-      <nav>
-        <h1>Recycle pay</h1>
-      </nav>
-
-      <div className="form-container">
-        <h1>Form Content</h1>
-      </div>
-    </div>
+    <AuthLayout>
+      <Button text="Yes" />
+    </AuthLayout>
     <br />
     <br />
     <br />
