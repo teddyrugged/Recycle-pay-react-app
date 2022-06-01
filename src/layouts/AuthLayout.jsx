@@ -2,11 +2,12 @@ import React from 'react';
 import './signup.css';
 import PropTypes from 'prop-types';
 import { Text } from 'components';
+import clsx from 'clsx';
 
-export const AuthLayout = ({ children }) => (
-  <div className="nav-container">
+export const AuthLayout = ({ divWidth, divHeight, children }) => (
+  <div className={clsx(`${divWidth} ${divHeight}`, ['form-container'])}>
     <header>
-      <Text.Heading text="Recyclepay" />
+      <Text size={24}>Recycle Pay</Text>
     </header>
     <div className="form-container">{children}</div>
   </div>
@@ -14,4 +15,6 @@ export const AuthLayout = ({ children }) => (
 
 AuthLayout.propTypes = {
   children: PropTypes.node,
+  divWidth: PropTypes.string,
+  divHeight: PropTypes.string,
 };
