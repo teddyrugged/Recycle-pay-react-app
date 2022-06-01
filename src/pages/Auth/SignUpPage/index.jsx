@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, PickupSnipets } from 'components';
+import { Button, Text, PickupSnipets, TopNav } from 'components';
 
 export const SignUpPage = () => (
   <div
@@ -32,6 +32,10 @@ export const SignUpPage = () => (
       <Button round stretch btnType="primary" text="Click Me" />
       <h1>PICKUP SNIPET - OLUSHOLA AND FRANKLYN</h1>
       <PickupSnipets customer="Yemi Davis" date="12-3-2022" location="7, Asajon Way, Sangotedo" />
+      <br />
+      <br />
+      <br />
+      <TopNav name="David Onab" />
       <h1>Typography</h1>
       <div>
         <Text size={50}>Hello</Text>
