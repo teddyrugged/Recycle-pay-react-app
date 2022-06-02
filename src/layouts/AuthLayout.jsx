@@ -5,7 +5,7 @@ import { Text } from 'components';
 import clsx from 'clsx';
 
 export const AuthLayout = ({ divWidth, divHeight, children }) => (
-  <div className={clsx(`${divWidth} ${divHeight}`, ['form-container'])}>
+  <div className={clsx(`${divWidth} ${divHeight}`, ['nav-container'])}>
     <header>
       <Text size={24}>Recycle Pay</Text>
     </header>

@@ -11,7 +11,27 @@ export const SignUpPage = () => (
     }}
   >
     <AuthLayout>
-      <Button text="Yes" />
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>
+        We’ve sent an email to you.
+        <br /> Kindly activate your account from the link in the email sent.
+      </Text>
+      <Button stretch btnType="primary" text="Resend Recovery Link" />
+    </AuthLayout>
+
+    <AuthLayout>
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>
+        Hi Yemi,
+        <br /> A request was made to reset your password. If you made this request, please continue.
+      </Text>
+      <Button stretch btnType="primary" text="Yes, continue" />
+    </AuthLayout>
+
+    <AuthLayout>
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>Hi Yemi,Your password has been successfully reset.</Text>
+      <Button stretch btnType="primary" text="Sign in" />
     </AuthLayout>
     <br />
     <br />
