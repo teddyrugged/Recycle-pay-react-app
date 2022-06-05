@@ -4,6 +4,7 @@ root {
 
 .RightSidebar-container {
   background: var(--white);
+  background-color: #eee;
   min-height: 100%;
   width: 30%;
   position: fixed;
@@ -13,8 +14,10 @@ root {
   padding: 2rem;
   transition: var(--normal);
 }
+
 .RightSidebar-title {
   font-size: 20px;
+  margin-bottom: 1rem;
 }
 
 .RightSidebar-title p {
