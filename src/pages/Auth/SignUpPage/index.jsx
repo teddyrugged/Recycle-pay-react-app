@@ -40,6 +40,6 @@ export const SignUpPage = () => (
       </div>
     </div>
     <DashHeader />
-    <RightSidebar title="Left" />
+    <RightSidebar title="Pickup Information" />
   </div>
 );

@@ -1,0 +1,33 @@
+root {
+  --normal: 0.4s ease all;
+}
+
+.RightSidebar-container {
+  background: var(--white);
+  min-height: 100%;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  padding: 2rem;
+  transition: var(--normal);
+}
+.RightSidebar-title {
+  font-size: 20px;
+}
+
+.RightSidebar-title p {
+  text-align: center;
+  position: relative;
+}
+
+.RightSidebar-title i {
+  position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+  .RightSidebar-container {
+    width: 90%;
+  }
+}
