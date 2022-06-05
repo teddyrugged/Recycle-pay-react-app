@@ -7,9 +7,14 @@ const basePropTypes = {
   children: PropTypes.node,
 };
 
+const HideSidebar = () => {
+  const sidebar = document.querySelector('.RightSidebar-container');
+  sidebar.classList.toggle('RightSidebar-inactive');
+};
+
 export const RightSidebar = ({ title, children }) => (
   <div className="RightSidebar-container">
-    <div className="RightSidebar-title">
+    <div className="RightSidebar-title" onClick={HideSidebar} onKeyPress={HideSidebar} aria-hidden="true">
       <i className="fa fa-caret-left" />
       <p>{title}</p>
     </div>
