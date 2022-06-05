@@ -1,15 +1,19 @@
 import React from 'react';
-import { Button, Text, Input } from 'components';
+import { Button, Text, Input, SignUp } from 'components';
 import { BiSearch } from 'react-icons/bi';
-import { TbMinusVertical } from 'react-icons/tb';
 import { AuthLayout } from 'layouts';
 
 export const SignUpPage = () => (
-  <div
-    style={{
-      padding: 20,
-    }}
-  >
+  <div>
+    <AuthLayout>
+      <SignUp />
+    </AuthLayout>
+
+    <br />
+    <br />
+    <br />
+    <hr />
+
     <AuthLayout>
       <Text size={20}>Reset password</Text>
       <Text size={24}>
@@ -33,6 +37,7 @@ export const SignUpPage = () => (
       <Text size={24}>Hi Yemi,Your password has been successfully reset.</Text>
       <Button stretch btnType="primary" text="Sign in" />
     </AuthLayout>
+
     <br />
     <br />
     <br />
@@ -64,39 +69,13 @@ export const SignUpPage = () => (
         <Text.Heading size={40} weight={500} text="Hey there I am a heading 2" />
       </div>
     </div>
-    <hr />
     <br />
-    <br />
-    <br />
+
     <div className="wrapper">
       <div className="wrapper--title">
         <h1>Sign Up</h1>
       </div>
-      <div className="wrapper--name">
-        <div>
-          <p style={{ margin: '0px 0px 10px 10px' }}>First Name</p>
-          <Input inputType="sm" styleType="l-round" type="text" placeholder="First Name" />
-        </div>
-        <div>
-          <p style={{ margin: '0px 0px 10px 10px' }}>Last Name</p>
-          <Input inputType="sm" styleType="r-round" placeholder="Last Name" />
-        </div>
-      </div>
-      <p style={{ margin: '0 0 -10px 10px' }}>Email Address</p>
-      <Input inputType="lg" styleType="full-round" type="email" placeholder="Email" />
-      <p style={{ margin: '0 0 -10px 10px' }}>Phone Number</p>
-      <div className="flex-div relative">
-        <p className="phone absolute">+234</p>
-        <TbMinusVertical className="line absolute" size={50} />
-        <Input
-          style={{ paddingLeft: 70 }}
-          inputType="lg"
-          styleType="full-round"
-          type="tel"
-          pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
-          placeholder="08000000000"
-        />
-      </div>
+
       <div className="flex-div relative">
         <BiSearch size={25} color="#04A405" className="bi-search absolute" />
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />

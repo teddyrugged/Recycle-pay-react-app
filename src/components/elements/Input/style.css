@@ -50,65 +50,10 @@
   border-radius: 11px;
 }
 
-.search-round {
-  border-radius: 19px;
-  padding-left: 50px;
-}
-
 .le-round {
   border-radius: 19px 0 0 19px;
 }
 
 .re-round {
   border-radius: 0 19px 19px 0;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 600px;
-  background-color: rgba(235, 254, 235, 0.4);
-  border-radius: 4px;
-}
-
-.wrapper--title {
-  display: flex;
-  justify-content: center;
-}
-
-.wrapper--name {
-  display: flex;
-  flex-direction: row;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.flex-div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.bi-search {
-  left: 15px;
-}
-
-.phone {
-  left: 14px;
-  font-size: 16px;
-  font-weight: 450;
-}
-
-.line {
-  stroke-width: 0.1;
-  left: 35px;
 }
