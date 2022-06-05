@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, DashHeader } from 'components';
+import { Button, Text, DashHeader, RightSidebar } from 'components';
 
 export const SignUpPage = () => (
   <div
@@ -40,5 +40,6 @@ export const SignUpPage = () => (
       </div>
     </div>
     <DashHeader />
+    <RightSidebar title="Left" />
   </div>
 );
