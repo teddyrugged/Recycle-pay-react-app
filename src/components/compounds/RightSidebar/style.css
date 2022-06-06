@@ -15,8 +15,21 @@
   transition: var(--normal);
 }
 
+.RightSidebar-container button {
+  cursor: pointer;
+  transition: var(--normal);
+}
+
+.RightSidebar-container button:hover {
+  transform: scale(1.05);
+}
+
 .RightSidebar-inactive {
   transform: translateX(100%);
+}
+
+.RightSidebar-body {
+  margin: 1rem auto;
 }
 
 .RightSidebar-title {
