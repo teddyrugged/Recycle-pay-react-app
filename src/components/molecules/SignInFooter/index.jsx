@@ -2,7 +2,7 @@ import React from 'react';
 import { Divider, GoogleButton, MainFooterText } from 'components';
 import './style.css';
 
-export const SignUpFooter = () => (
+export const SignInFooter = () => (
   <div className="wrapper--Footer">
     <div className="wrapper--divider">
       <Divider text="OR" />
@@ -11,7 +11,7 @@ export const SignUpFooter = () => (
       <GoogleButton text="Continue with Google" />
     </div>
     <div className="wrapper--footer--text">
-      <MainFooterText link="#" text1="Already have an account?" text2="Sign In" />
+      <MainFooterText link="#" text1="Don’t have an account?" text2="Sign Up" />
     </div>
   </div>
 );
