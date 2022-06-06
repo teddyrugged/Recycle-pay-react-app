@@ -21,7 +21,7 @@ export const RightSidebar = ({ title, children, btnText }) => (
       <p>{title}</p>
     </div>
     <div className="RightSidebar-body">{children}</div>
-    <Button stretch btnType="primary" text={btnText} />
+    {btnText ? <Button stretch btnType="primary" text={btnText} /> : ''}
   </div>
 );
 
