@@ -42,7 +42,12 @@ export const SignUpPage = () => (
     <DashHeader />
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
       <Text text="Material Type" />
-      <Radio text="Blood dripping" />
+      <Radio text="Plastic" />
+      <Radio text="Bottles" />
+      <Radio text="Metal (Iron & Aluminium Scrap)" />
+      <Radio text="Paper & Cardboard" />
+      <Radio text="Tires" />
+      <Radio text="Batteries & Electronics" />
     </RightSidebar>
   </div>
 );

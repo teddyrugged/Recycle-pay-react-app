@@ -1,0 +1,13 @@
+.RadioButton-body {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.RadioButton-body input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--primary-main);
+  display: inline-block;
+  margin-right: 1rem;
+}
