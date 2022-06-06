@@ -43,6 +43,7 @@ export const SignUpPage = () => (
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
       <form action="">
         <Text text="Material Type" />
+        <br />
         <Radio text="Plastic" name="options" />
         <Radio text="Bottles" name="options" />
         <Radio text="Metal (Iron & Aluminium Scrap)" name="options" />

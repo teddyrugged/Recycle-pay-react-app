@@ -1,7 +1,8 @@
 .RadioButton-body {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   align-items: center;
+  color: #666;
 }
 
 .RadioButton-body input[type='radio'] {
