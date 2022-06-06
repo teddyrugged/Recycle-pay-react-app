@@ -4,8 +4,8 @@
 
 .RightSidebar-container {
   background: var(--white);
-  background-color: #eee;
-  min-height: 100%;
+  background-color: #f7f7f7;
+  height: 100%;
   width: 30%;
   position: fixed;
   top: 0;
@@ -14,6 +14,7 @@
   padding: 2rem;
   transition: var(--normal);
   font-family: 'Circular Std', sans-serif;
+  overflow: auto;
 }
 .RightSidebar-form {
   margin: 1.3rem auto;

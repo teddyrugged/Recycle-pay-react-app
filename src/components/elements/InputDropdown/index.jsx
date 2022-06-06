@@ -15,6 +15,7 @@ export const InputDropdown = ({ title, date, dropdown }) => (
     <div className="InputDropdown-input">
       {date ? <i className="fa-regular fa-calendar" /> : ''}
       {dropdown ? <i className="fa fa-chevron-down" /> : ''}
+      <input type="text" disabled />
     </div>
   </div>
 );
