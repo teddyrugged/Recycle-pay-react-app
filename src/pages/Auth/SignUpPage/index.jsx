@@ -50,7 +50,9 @@ export const SignUpPage = () => (
         <Radio text="Tires" name="options" />
         <Radio text="Batteries & Electronics" name="options" />
       </form>
-      <InputDropdown />
+      <InputDropdown title="Heyyyy" dropdown />
+      <InputDropdown title="Heyyyy" />
+      <InputDropdown title="Heyyyy" date />
     </RightSidebar>
   </div>
 );
