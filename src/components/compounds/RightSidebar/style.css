@@ -13,6 +13,7 @@
   z-index: 1001;
   padding: 2rem;
   transition: var(--normal);
+  font-family: 'Circular Std', sans-serif;
 }
 
 .RightSidebar-container button {

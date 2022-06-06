@@ -1,5 +1,6 @@
-/*Font awesome 6 CDN*/
+/*Font awesome 6 CDN and Circular Font*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('http://fonts.cdnfonts.com/css/circular-std');
 
 .dash-navbar {
   height: 75px;
@@ -8,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  font-family: 'Circular Std', sans-serif;
 }
 
 .name-icon {
