@@ -15,6 +15,9 @@
   transition: var(--normal);
   font-family: 'Circular Std', sans-serif;
 }
+.RightSidebar-form {
+  margin: 1.3rem auto;
+}
 
 .RightSidebar-container button {
   cursor: pointer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, DashHeader, RightSidebar, Radio } from 'components';
+import { Button, Text, DashHeader, RightSidebar, Radio, InputDropdown } from 'components';
 
 export const SignUpPage = () => (
   <div
@@ -41,9 +41,8 @@ export const SignUpPage = () => (
     </div>
     <DashHeader />
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
-      <form action="">
-        <Text text="Material Type" />
-        <br />
+      <Text text="Material Type" />
+      <form action="" className="RightSidebar-form">
         <Radio text="Plastic" name="options" />
         <Radio text="Bottles" name="options" />
         <Radio text="Metal (Iron & Aluminium Scrap)" name="options" />
@@ -51,6 +50,7 @@ export const SignUpPage = () => (
         <Radio text="Tires" name="options" />
         <Radio text="Batteries & Electronics" name="options" />
       </form>
+      <InputDropdown />
     </RightSidebar>
   </div>
 );
