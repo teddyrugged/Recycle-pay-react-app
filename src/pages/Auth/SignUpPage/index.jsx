@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button, Text, DashHeader, RightSidebar, Radio, InputDropdown } from 'components';
 
+const ShowSidebar = () => {
+  const sidebar = document.querySelector('.RightSidebar-container');
+  sidebar.classList.remove('RightSidebar-inactive');
+};
+
 export const SignUpPage = () => (
   <div
     style={{
@@ -40,6 +45,8 @@ export const SignUpPage = () => (
       </div>
     </div>
     <DashHeader />
+    <br />
+    <Button stretch btnType="primary" text="Open Sidebar" onClick={ShowSidebar} />
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
       <Text text="Material Type" />
       <form action="" className="RightSidebar-form">
