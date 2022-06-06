@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, DashHeader, RightSidebar } from 'components';
+import { Button, Text, DashHeader, RightSidebar, Radio } from 'components';
 
 export const SignUpPage = () => (
   <div
@@ -42,6 +42,7 @@ export const SignUpPage = () => (
     <DashHeader />
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
       <Text text="Material Type" />
+      <Radio />
     </RightSidebar>
   </div>
 );
