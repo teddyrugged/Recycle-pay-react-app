@@ -1,0 +1,19 @@
+.wrapper-google-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper-logo {
+  position: absolute;
+  left: 110px;
+}
+
+.google-button {
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 24px;
+  color: #025002;
+}
