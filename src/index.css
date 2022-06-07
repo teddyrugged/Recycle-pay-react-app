@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/circular-std');
+
 :root {
   /*COLORS*/
   --white: #ffffff;
@@ -18,4 +20,5 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Circular Std', sans-serif;
 }
