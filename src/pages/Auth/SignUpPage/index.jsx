@@ -23,7 +23,6 @@ export const SignUpPage = () => (
     >
       <Button text="Yes" />
       <Button text="Click Me" />
-      <Button btnType="primary" text="Click Alert" onClick={() => alert('Clicked')} />
       <Button btnType="secondary" text="Click Me" />
       <Button round btnType="primary" text="Click Me" />
       <Button round btnType="secondary" text="Secondary Rounded" />

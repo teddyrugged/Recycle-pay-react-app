@@ -9,6 +9,9 @@
   /*neutral*/
   --neutral-60: #18181899;
   --neutral-70: #181818b2;
+
+  /*secondary*/
+  --secondary-80: #d99426;
 }
 
 * {
