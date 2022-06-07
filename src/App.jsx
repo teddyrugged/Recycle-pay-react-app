@@ -11,9 +11,9 @@ import {
 } from 'pages';
 
 const App = () => (
-  <div className="App">
+  <main>
     <Routes>
-      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/" element={<SignUpPage />} />
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/reset-1" element={<PasswordResetOne />} />
       <Route path="/reset-2" element={<PasswordResetTwo />} />
@@ -22,7 +22,7 @@ const App = () => (
       <Route path="/reset-5" element={<PasswordResetFive />} />
       <Route path="/page-2" element={<AnotherPage />} />
     </Routes>
-  </div>
+  </main>
 );
 
 export default App;
