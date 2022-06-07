@@ -4,17 +4,16 @@ import PropTypes from 'prop-types';
 import { Text } from 'components';
 import clsx from 'clsx';
 
-export const AuthLayout = ({ divWidth, divHeight, children }) => (
-  <div className={clsx(`${divWidth} ${divHeight}`, ['nav-container'])}>
-    <header>
+export const AuthLayout = ({ children, className, ...props }) => (
+  <header className={clsx('nav-container', className)} {...props}>
+    <div>
       <Text size={24}>Recycle Pay</Text>
-    </header>
+    </div>
     <div className="form-container">{children}</div>
-  </div>
+  </header>
 );
 
 AuthLayout.propTypes = {
   children: PropTypes.node,
-  divWidth: PropTypes.string,
-  divHeight: PropTypes.string,
+  className: PropTypes.string,
 };
