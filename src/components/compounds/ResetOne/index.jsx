@@ -1,9 +1,9 @@
 import React from 'react';
-import { AuthLayout } from 'layouts';
 import { LabelText, FullDualRoundInput, ResetTitle, Button } from 'components';
+import './style.css';
 
-export const PasswordResetOne = () => (
-  <AuthLayout>
+export const ResetOne = () => (
+  <div>
     <ResetTitle />
     <div className="wrapper--email">
       <div className="wrapper--label--email">
@@ -14,5 +14,5 @@ export const PasswordResetOne = () => (
       </div>
     </div>
     <Button stretch btnType="primary" text="Send Recovery Link" />
-  </AuthLayout>
+  </div>
 );

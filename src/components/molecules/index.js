@@ -12,3 +12,5 @@ export { SignInForgotPassword } from './SignInForgotPassword';
 export { SignInEmail } from './SignInEmail';
 export { SignInTitle } from './SignInTitle';
 export { SignInFooter } from './SignInFooter';
+
+export { ResetTitle } from './ResetTitle';

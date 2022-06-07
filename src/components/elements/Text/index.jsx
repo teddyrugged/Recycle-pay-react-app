@@ -2,8 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-export const Text = ({ text, size, weight, styleType, children }) => (
-  <p style={{ fontSize: size ?? 16, fontWeight: weight ?? 450 }} className={clsx(`${styleType}`)}>
+const colors = {
+  'primary-main': 'var(--primary-main)',
+  black: 'var(--neutral-70)',
+  'secondary-80': 'var(--secondary-80)',
+};
+
+export const Text = ({ text, size, weight, styleType, children, color }) => (
+  <p
+    style={{ fontSize: size || 16, fontWeight: weight || 450, color: colors[color || 'black'] }}
+    className={clsx(`${styleType}`)}
+  >
     {text || children}
   </p>
 );
@@ -14,8 +23,8 @@ export const Heading = ({ text, size, weight, styleType, level, children, ...pro
     {
       className: { styleType },
       style: {
-        fontSize: size ?? 16,
-        fontWeight: weight ?? 450,
+        fontSize: size || 16,
+        fontWeight: weight || 450,
       },
       ...props,
     },
@@ -30,6 +39,7 @@ const basePropTypes = {
   text: PropTypes.string,
   styleType: PropTypes.string,
   children: PropTypes.node,
+  color: PropTypes.oneOf(Object.keys(colors)),
 };
 
 Text.propTypes = {
