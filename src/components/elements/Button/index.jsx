@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './style.css';
 import clsx from 'clsx';
 
-export const Button = ({ text, btnType, stretch, round, children, ...props }) => (
+export const Button = ({ text, btnType, btnStyle, stretch, round, children, ...props }) => (
   <button
-    className={clsx(`button-base ${btnType || 'primary'}`, [
+    className={clsx(`button-base ${btnType || 'primary'} ${btnStyle}`, [
       { stretch, round, 'round-secondary': round && btnType === 'secondary' },
     ])}
     type="button"
@@ -21,4 +21,5 @@ Button.propTypes = {
   btnType: PropTypes.oneOf(['primary', 'secondary']),
   stretch: PropTypes.bool,
   round: PropTypes.bool,
+  btnStyle: PropTypes.string,
 };

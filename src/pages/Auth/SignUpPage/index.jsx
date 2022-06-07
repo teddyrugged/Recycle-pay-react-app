@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button, Text, DashHeader, RightSidebar, Radio, InputDropdown } from 'components';
+
+import { Button, Text, DashHeader, RightSidebar, Radio, InputDropdown, Input, SignUp } from 'components';
+import { BiSearch } from 'react-icons/bi';
+import { AuthLayout } from 'layouts';
 
 const ShowSidebar = () => {
   const sidebar = document.querySelector('.RightSidebar-container');
@@ -7,12 +10,40 @@ const ShowSidebar = () => {
 };
 
 export const SignUpPage = () => (
-  <div
-    style={{
-      padding: 20,
-    }}
-  >
-    Sign Up Page
+  <div>
+    <AuthLayout>
+      <SignUp />
+    </AuthLayout>
+
+    <br />
+    <br />
+    <br />
+    <hr />
+
+    <AuthLayout>
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>
+        We’ve sent an email to you.
+        <br /> Kindly activate your account from the link in the email sent.
+      </Text>
+      <Button stretch btnType="primary" text="Resend Recovery Link" />
+    </AuthLayout>
+
+    <AuthLayout>
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>
+        Hi Yemi,
+        <br /> A request was made to reset your password. If you made this request, please continue.
+      </Text>
+      <Button stretch btnType="primary" text="Yes, continue" />
+    </AuthLayout>
+
+    <AuthLayout>
+      <Text size={20}>Reset password</Text>
+      <Text size={24}>Hi Yemi,Your password has been successfully reset.</Text>
+      <Button stretch btnType="primary" text="Sign in" />
+    </AuthLayout>
+
     <br />
     <br />
     <br />
@@ -43,6 +74,7 @@ export const SignUpPage = () => (
         <Text.Heading size={40} weight={500} text="Hey there I am a heading 2" />
       </div>
     </div>
+
     <DashHeader />
     <br />
     <Button stretch btnType="primary" text="Open Sidebar" onClick={ShowSidebar} />
@@ -60,5 +92,18 @@ export const SignUpPage = () => (
       <InputDropdown title="Pickup Address" />
       <InputDropdown title="Set Pickup Date" date />
     </RightSidebar>
+
+    <br />
+
+    <div className="wrapper">
+      <div className="wrapper--title">
+        <h1>Sign Up</h1>
+      </div>
+
+      <div className="flex-div relative">
+        <BiSearch size={25} color="#04A405" className="bi-search absolute" />
+        <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
+      </div>
+    </div>
   </div>
 );
