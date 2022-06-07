@@ -1,6 +1,7 @@
 export * from './Button';
 export * from './Text';
 export * from './Input';
+export * from './Loader';
 export { MainTitleText } from './Text/MainTitleText';
 export { LabelText } from './Text/LabelText';
 export { MainFooterText } from './Text/MainFooterText';
