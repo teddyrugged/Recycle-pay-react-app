@@ -1,23 +1,14 @@
 import React from 'react';
-import {
-  SignUpTitle,
-  SignUpButton,
-  SignUpEmail,
-  SignUpName,
-  SignUpPassword,
-  SignUpPhone,
-  SignUpFooter,
-} from 'components';
+import { SignInTitle, SignInForgotPassword, SignInButton, SignInEmail, SignInPassword, SignInFooter } from 'components';
 import './style.css';
 
-export const SignUp = () => (
+export const SignIn = () => (
   <div>
-    <SignUpTitle />
-    <SignUpName />
-    <SignUpEmail />
-    <SignUpPhone />
-    <SignUpPassword />
-    <SignUpButton />
-    <SignUpFooter />
+    <SignInTitle />
+    <SignInEmail />
+    <SignInPassword />
+    <SignInForgotPassword />
+    <SignInButton />
+    <SignInFooter />
   </div>
 );

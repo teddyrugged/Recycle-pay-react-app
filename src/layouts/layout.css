@@ -1,0 +1,28 @@
+.nav-header {
+  background: var(--primary-40);
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+}
+
+.left-sidebar {
+  height: 100vh;
+  background: #fff;
+  width: 256px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: sticky;
+}

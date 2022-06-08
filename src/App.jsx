@@ -6,23 +6,21 @@ import {
   PasswordResetTwo,
   PasswordResetThree,
   PasswordResetFive,
-  SignInLoading,
-  SignUpLoading,
+  PasswordResetFour,
 } from 'pages';
 
 const App = () => (
-  <div className="App">
+  <main>
     <Routes>
-      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/" element={<SignUpPage />} />
       <Route path="/signin" element={<SignInPage />} />
-      <Route path="/forgot-two" element={<PasswordResetTwo />} />
-      <Route path="/forgot-three" element={<PasswordResetThree />} />
-      <Route path="/forgot-five" element={<PasswordResetFive />} />
-      <Route path="/signin-loading" element={<SignInLoading />} />
-      <Route path="/signup-loading" element={<SignUpLoading />} />
+      <Route path="/reset-2" element={<PasswordResetTwo />} />
+      <Route path="/reset-3" element={<PasswordResetThree />} />
+      <Route path="/reset-4" element={<PasswordResetFour />} />
+      <Route path="/reset-5" element={<PasswordResetFive />} />
       <Route path="/page-2" element={<AnotherPage />} />
     </Routes>
-  </div>
+  </main>
 );
 
 export default App;

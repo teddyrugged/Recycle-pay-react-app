@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Text, Input, SignUp } from 'components';
 import { BiSearch } from 'react-icons/bi';
-import { AuthLayout } from 'layouts';
+import { AuthLayout, DashboardLayout } from 'layouts';
 
 export const SignUpPage = () => (
   <div>
@@ -9,19 +9,21 @@ export const SignUpPage = () => (
       <SignUp />
     </AuthLayout>
 
+    <DashboardLayout>
+      <AuthLayout>
+        <Text size={20}>Reset password</Text>
+        <Text size={24}>
+          We’ve sent an email to you.
+          <br /> Kindly activate your account from the link in the email sent.
+        </Text>
+        <Button stretch btnType="primary" text="Resend Recovery Link" />
+      </AuthLayout>
+    </DashboardLayout>
+
     <br />
     <br />
     <br />
     <hr />
-
-    <AuthLayout>
-      <Text size={20}>Reset password</Text>
-      <Text size={24}>
-        We’ve sent an email to you.
-        <br /> Kindly activate your account from the link in the email sent.
-      </Text>
-      <Button stretch btnType="primary" text="Resend Recovery Link" />
-    </AuthLayout>
 
     <AuthLayout>
       <Text size={20}>Reset password</Text>
@@ -53,7 +55,6 @@ export const SignUpPage = () => (
     >
       <Button text="Yes" />
       <Button text="Click Me" />
-      <Button btnType="primary" text="Click Alert" onClick={() => alert('Clicked')} />
       <Button btnType="secondary" text="Click Me" />
       <Button round btnType="primary" text="Click Me" />
       <Button round btnType="secondary" text="Secondary Rounded" />
