@@ -1,18 +1,25 @@
+@import url('http://fonts.cdnfonts.com/css/circular-std');
+
 :root {
   /*COLORS*/
   --white: #ffffff;
   /*primary*/
   --primary-main: #04a405;
   --primary-10: #ebfeeb;
+  --primary-40: #79d279;
   --primary-80: #025002;
 
   /*neutral*/
   --neutral-60: #18181899;
   --neutral-70: #181818b2;
+
+  /*secondary*/
+  --secondary-80: #d99426;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Circular Std', sans-serif;
 }

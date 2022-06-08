@@ -1,0 +1,18 @@
+.wrapper-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.rule {
+  width: 217.5px;
+  height: 0px;
+  border: 0.5px solid rgba(2, 80, 2, 0.2);
+}
+
+.divider-text {
+  color: #025002;
+  line-height: 24px;
+}
