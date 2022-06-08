@@ -1,6 +1,17 @@
 import React from 'react';
 
-import { Button, Text, DashHeader, RightSidebar, Radio, InputDropdown, Input, SignUp } from 'components';
+import {
+  Button,
+  Text,
+  DashHeader,
+  RightSidebar,
+  Radio,
+  InputDropdown,
+  Input,
+  SignUp,
+  PickupSnipets,
+  Welcome,
+} from 'components';
 import { BiSearch } from 'react-icons/bi';
 import { AuthLayout } from 'layouts';
 
@@ -51,31 +62,34 @@ export const SignUpPage = () => (
     <br />
     <br />
     <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: 20,
-      }}
+    // style={{
+    //   display: 'flex',
+    //   flex_direction: 'column',
+    //   flexWrap: 'wrap',
+    //   gap: 20,
+    // }}
     >
-      <Button text="Yes" />
+      {/* <Button text="Yes" />
       <Button text="Click Me" />
       <Button btnType="secondary" text="Click Me" />
       <Button round btnType="primary" text="Click Me" />
       <Button round btnType="secondary" text="Secondary Rounded" />
       <Button stretch btnType="primary" text="Click Me" />
-      <Button round stretch btnType="primary" text="Click Me" />
-      <h1>Typography</h1>
+      <Button round stretch btnType="primary" text="Click Me" /> */}
+      <h1>PICKUP SNIPET - OLUSHOLA AND FRANKLYN</h1>
+      <PickupSnipets customer="Yemi Davis" date="12-3-2022" location="7, Asajon Way, Sangotedo" />
+      {/* <h1>Typography</h1>
       <div>
         <Text size={50}>Hello</Text>
         <Text text="Hey there" />
         <Text.Heading text="Hey there I am a heading" />
         <Text.Heading level={2} text="Hey there I am a heading 2" />
-
         <Text.Heading size={40} weight={500} text="Hey there I am a heading 2" />
-      </div>
+      </div> */}
     </div>
 
     <DashHeader />
+
     <br />
     <Button stretch btnType="primary" text="Open Sidebar" onClick={ShowSidebar} />
     <RightSidebar title="Pickup Information" btnText="Confirm Pickup">
@@ -105,5 +119,7 @@ export const SignUpPage = () => (
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
+
+    <Welcome />
   </div>
 );
