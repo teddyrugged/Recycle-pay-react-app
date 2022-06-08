@@ -7,8 +7,8 @@ import './style.css';
 const PickupSnipet = ({ title, text }) => (
   <div className="snipet__container">
     <div className="snipet__wrapper">
-      <Text className="snipet__title" text={title} />
-      <Text className="snipet__text" text={text} />
+      <Text text={title} color="neutral-60" font-size="16px" line-height="24px" />
+      <Text text={text} color="neutral-70" font-size="16px" line-height="24px" />
     </div>
   </div>
 );
@@ -21,17 +21,21 @@ PickupSnipet.propTypes = {
 export const PickupSnipets = ({ customer, date, location }) => (
   <div className="container">
     <div className="wrapper">
-      <div className="sub-wrapper name">
+      <div className="div">
         <div className="dot_wrapper">
           <div className="dot" />
         </div>
+      </div>
+      <div className="div">
         <PickupSnipet title="Name of Customer" text={customer} />
       </div>
-      <div className="sub-wrapper">
+      <div className="div">
         <PickupSnipet title="Pickup Date" text={date} />
+      </div>
+      <div className="div">
         <PickupSnipet title="Pickup Location" text={location} />
       </div>
-      <div>
+      <div className="div btn">
         <Button round btnType="secondary" text="Request Pickup" />
       </div>
     </div>
