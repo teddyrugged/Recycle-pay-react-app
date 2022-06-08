@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, Input, SignUp } from 'components';
+import { Button, Text, Input, SignUp, DashHeader } from 'components';
 import { BiSearch } from 'react-icons/bi';
 import { AuthLayout } from 'layouts';
 
@@ -68,6 +68,9 @@ export const SignUpPage = () => (
         <Text.Heading size={40} weight={500} text="Hey there I am a heading 2" />
       </div>
     </div>
+
+    <DashHeader />
+
     <br />
 
     <div className="wrapper">
@@ -80,5 +83,6 @@ export const SignUpPage = () => (
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
+
   </div>
 );

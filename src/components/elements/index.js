@@ -1,5 +1,6 @@
 export * from './Button';
 export * from './Text';
+export * from './SearchBar';
 export * from './Input';
 export { MainTitleText } from './Text/MainTitleText';
 export { LabelText } from './Text/LabelText';
