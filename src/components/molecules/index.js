@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+export * from './PickupSnipets';
+
 export { SignUpButton } from './SignUpButton';
 export { SignUpName } from './SignUpName';
 export { SignUpPassword } from './SignUpPassword';
@@ -12,5 +15,4 @@ export { SignInForgotPassword } from './SignInForgotPassword';
 export { SignInEmail } from './SignInEmail';
 export { SignInTitle } from './SignInTitle';
 export { SignInFooter } from './SignInFooter';
-
 export { ResetTitle } from './ResetTitle';
