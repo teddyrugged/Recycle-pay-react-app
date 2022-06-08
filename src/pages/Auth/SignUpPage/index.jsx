@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import { Button, Text, PickupSnipets } from 'components';
-import { Button, Text, Input, SignUp, DashHeader, PickupSnipets } from 'components';
+import { Button, Text, Input, SignUp, DashHeader, PickupSnipets, Welcome } from 'components';
 import { BiSearch } from 'react-icons/bi';
 import { AuthLayout } from 'layouts';
 
@@ -87,5 +87,6 @@ export const SignUpPage = () => (
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
+    <Welcome />
   </div>
 );
