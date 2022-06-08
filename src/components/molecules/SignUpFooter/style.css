@@ -1,0 +1,10 @@
+.wrapper--Footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.wrapper--divider,
+.wrapper--google {
+  margin-bottom: 24px;
+}

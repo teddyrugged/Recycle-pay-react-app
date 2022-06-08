@@ -1,0 +1,9 @@
+.wrapper--phone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.wrapper--label--phone {
+  margin: 0 0 8px 8px;
+}
