@@ -1,7 +1,11 @@
 /* eslint-disable import/extensions */
 export * from './Button';
 export * from './Text';
+
 export * from './SearchBar';
+export * from './RadioButton';
+export * from './InputDropdown';
+
 export * from './Input';
 export { MainTitleText } from './Text/MainTitleText';
 export { LabelText } from './Text/LabelText';
