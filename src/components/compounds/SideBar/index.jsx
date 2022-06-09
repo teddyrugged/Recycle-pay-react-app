@@ -13,9 +13,11 @@ export const SideBar = () => (
   <div className="sidebar">
     <Text.Heading text="RecyclePay" level={1} weight={700} size={24} line-height="32px" width="128px" color="green" />
 
-    <div className="box1 box">
-      <Grid className="img-grid" />
-      <Text className="containerText">Overview</Text>
+    <div className="edgeBox">
+      <div className="box1 box">
+        <Grid className="img-grid" />
+        <Text className="containerText">Overview</Text>
+      </div>
     </div>
 
     <div className="box">

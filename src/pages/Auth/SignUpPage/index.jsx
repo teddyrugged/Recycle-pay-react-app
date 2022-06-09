@@ -5,9 +5,7 @@ import { AuthLayout } from 'layouts';
 
 export const SignUpPage = () => (
   <div>
-    <AuthLayout>
-      <SideBar />
-    </AuthLayout>
+    <AuthLayout />
 
     <AuthLayout>
       <SignUp />
@@ -87,5 +85,6 @@ export const SignUpPage = () => (
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
+    <SideBar />
   </div>
 );
