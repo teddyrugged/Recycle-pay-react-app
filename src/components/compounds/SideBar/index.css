@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100vh;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.space {
+  margin: 8rem 0;
+}

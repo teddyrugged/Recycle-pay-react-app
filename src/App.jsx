@@ -9,7 +9,6 @@ import {
   PasswordResetFour,
   PasswordResetFive,
 } from 'pages';
-import { Sidebar } from './components/molecules/sideBar/index';
 
 const App = () => (
   <main>
@@ -22,7 +21,6 @@ const App = () => (
       <Route path="/reset-4" element={<PasswordResetFour />} />
       <Route path="/reset-5" element={<PasswordResetFive />} />
       <Route path="/page-2" element={<AnotherPage />} />
-      <Route path="/page-3" element={<Sidebar />} />
     </Routes>
   </main>
 );

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Button, Text, Input, SignUp, DashHeader } from 'components';
+import { Button, Text, Input, SignUp, DashHeader, SideBar } from 'components';
 import { BiSearch } from 'react-icons/bi';
 import { AuthLayout } from 'layouts';
 
 export const SignUpPage = () => (
   <div>
+    <AuthLayout>
+      <SideBar />
+    </AuthLayout>
+
     <AuthLayout>
       <SignUp />
     </AuthLayout>
