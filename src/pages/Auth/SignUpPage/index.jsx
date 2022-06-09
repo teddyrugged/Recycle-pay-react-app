@@ -12,6 +12,7 @@ import {
   PickupSnipets,
   Welcome,
 } from 'components';
+
 import { BiSearch } from 'react-icons/bi';
 import { AuthLayout } from 'layouts';
 
