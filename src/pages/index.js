@@ -6,3 +6,4 @@ export { PasswordResetThree } from 'pages/Auth';
 export { PasswordResetFour } from 'pages/Auth';
 export { PasswordResetFive } from 'pages/Auth';
 export { AnotherPage } from 'pages/AnotherPage';
+export { OverviewPage } from 'pages/Overview';

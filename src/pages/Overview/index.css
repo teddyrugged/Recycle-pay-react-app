@@ -1,0 +1,25 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-left: 18%;
+}
+
+.welcome {
+  margin-top: 115px;
+  margin-left: 21%;
+}
+
+.head-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 21.5%;
+  margin-right: 7.5%;
+}
+
+.right-text {
+  display: flex;
+}
