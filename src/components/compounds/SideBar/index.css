@@ -1,0 +1,28 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100vh;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box1 {
+  background-color: #ebfeebe5;
+  padding-left: 25px;
+}
+
+.space {
+  margin: 8rem 0;
+}
+
+.edgeBox {
+  margin-left: -30px;
+  padding-left: 5px;
+  background-color: green;
+}

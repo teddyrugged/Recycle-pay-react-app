@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 const colors = {
   'primary-main': 'var(--primary-main)',
+  green: 'var(--primary-80)',
   black: 'var(--neutral-70)',
   'secondary-80': 'var(--secondary-80)',
   white: '#ffffff',
@@ -16,13 +17,14 @@ export const Text = ({ text, size, weight, children, color, ...props }) => (
   </p>
 );
 
-export const Heading = ({ text, size, weight, styleType, level, children, ...props }) =>
+export const Heading = ({ text, size, weight, styleType, level, children, color, ...props }) =>
   React.createElement(
     `h${level || 1}`,
     {
       style: {
         fontSize: size || 16,
         fontWeight: weight || 450,
+        color: colors[color || 'black'],
       },
       ...props,
     },

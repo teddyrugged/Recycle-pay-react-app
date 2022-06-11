@@ -1,4 +1,6 @@
 import React from 'react';
+import { BiSearch } from 'react-icons/bi';
+import { AuthLayout } from 'layouts';
 
 import {
   Button,
@@ -13,8 +15,6 @@ import {
   Welcome,
 } from 'components';
 
-import { BiSearch } from 'react-icons/bi';
-import { AuthLayout } from 'layouts';
 
 const ShowSidebar = () => {
   const sidebar = document.querySelector('.RightSidebar-container');
@@ -23,6 +23,8 @@ const ShowSidebar = () => {
 
 export const SignUpPage = () => (
   <div>
+    <AuthLayout />
+
     <AuthLayout>
       <SignUp />
     </AuthLayout>
@@ -120,7 +122,7 @@ export const SignUpPage = () => (
         <Input inputType="lg" styleType="search-round" type="text" placeholder="e.g Search ID 16256" />
       </div>
     </div>
-
+    <SideBar />
     <Welcome />
   </div>
 );
