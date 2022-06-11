@@ -1,25 +1,29 @@
 .overview {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
-.header {
-  margin-left: 18%;
+.content {
+  width: 100%;
 }
 
 .welcome {
-  margin-top: 115px;
-  margin-left: 21%;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 100%;
 }
 
 .head-text {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-left: 21.5%;
-  margin-right: 7.5%;
+  margin-top: 6%;
+  margin-left: 5%;
+  margin-right: 4%;
 }
 
 .right-text {
+  display: flex;
+}
+.overview-body {
   display: flex;
 }

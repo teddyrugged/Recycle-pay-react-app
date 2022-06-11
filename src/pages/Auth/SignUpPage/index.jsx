@@ -13,8 +13,8 @@ import {
   SignUp,
   PickupSnipets,
   Welcome,
+  SideBar,
 } from 'components';
-
 
 const ShowSidebar = () => {
   const sidebar = document.querySelector('.RightSidebar-container');

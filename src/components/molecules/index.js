@@ -15,6 +15,5 @@ export { SignInEmail } from './SignInEmail';
 export { SignInTitle } from './SignInTitle';
 export { SignInFooter } from './SignInFooter';
 export { ResetTitle } from './ResetTitle';
-export { Welcome } from './Welcome_intro';
+export { Welcome } from './Welcome';
 export { RecentPickups } from './RecentPickups';
-
