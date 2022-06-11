@@ -8,6 +8,7 @@ import {
   PasswordResetThree,
   PasswordResetFour,
   PasswordResetFive,
+  OverviewPage,
 } from 'pages';
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/reset-4" element={<PasswordResetFour />} />
       <Route path="/reset-5" element={<PasswordResetFive />} />
       <Route path="/page-2" element={<AnotherPage />} />
+      <Route path="/dashboard/overview" element={<OverviewPage />} />
     </Routes>
   </main>
 );
