@@ -10,6 +10,7 @@ import {
   PasswordResetFive,
   OverviewPage,
 } from 'pages';
+import { SideBar } from 'components';
 
 const App = () => (
   <main>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/reset-4" element={<PasswordResetFour />} />
       <Route path="/reset-5" element={<PasswordResetFive />} />
       <Route path="/page-2" element={<AnotherPage />} />
+      <Route path="/page-7" element={<SideBar />} />
       <Route path="/dashboard/overview" element={<OverviewPage />} />
     </Routes>
   </main>

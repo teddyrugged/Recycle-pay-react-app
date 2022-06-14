@@ -11,13 +11,13 @@ import { ReactComponent as Num } from './images/num.svg';
 
 export const SideBar = () => (
   <div className="sidebar">
-    <Text.Heading text="RecyclePay" level={1} weight={700} size={24} line-height="32px" width="128px" color="green" />
+    <div className="logo">
+      <Text.Heading text="RecyclePay" level={1} weight={700} size={24} line-height="32px" width="128px" color="green" />
+    </div>
 
-    <div className="edgeBox">
-      <div className="box1 box">
-        <Grid className="img-grid" />
-        <Text className="containerText">Overview</Text>
-      </div>
+    <div className="box1 box">
+      <Grid />
+      <Text className="containerText">Overview</Text>
     </div>
 
     <div className="box">
