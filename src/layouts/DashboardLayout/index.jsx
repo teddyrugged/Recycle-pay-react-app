@@ -2,12 +2,37 @@ import React from 'react';
 import 'layouts/layout.css';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import { Text } from 'components';
+import icon from './icon.svg';
 
-export const DashboardLayout = ({ children, sidebarClassName, bodyClassName }) => (
+const hideLeftSidebar = () => {
+  document.querySelector('.left-sidebar').classList.add('left-slide');
+};
+
+const showLeftSidebar = () => {
+  document.querySelector('.left-sidebar').classList.remove('left-slide');
+};
+
+export const DashboardLayout = ({ children, title, sidebarClassName, bodyClassName }) => (
   <>
-    <div className={clsx('left-sidebar', sidebarClassName)}>{children}</div>
-
-    <div className={clsx('main', bodyClassName)}>{children}</div>
+    <div>
+      <button type="button" onClick={() => showLeftSidebar()} className="show-sidebar">
+        <img src={icon} alt="" className="left-slide-icon" />{' '}
+      </button>
+      {/* {children} */}
+    </div>
+    <div className={clsx('left-sidebar', sidebarClassName)}>
+      <div className="sidebar-header">
+        <Text>{title}</Text>
+        <button type="button" onClick={() => hideLeftSidebar()}>
+          <img src={icon} alt="" className="left-slide-icon" />{' '}
+        </button>
+      </div>
+      <div className={clsx('sidebar-content', bodyClassName)}>
+        <div />
+        {children}
+      </div>
+    </div>
   </>
 );
 
@@ -15,4 +40,5 @@ DashboardLayout.propTypes = {
   children: PropTypes.node,
   sidebarClassName: PropTypes.string,
   bodyClassName: PropTypes.string,
+  title: PropTypes.string,
 };

@@ -1,5 +1,7 @@
+/* eslint-disable import/extensions */
 export * from './Button';
 export * from './Text';
+export * from './SearchBar';
 export * from './Input';
 export * from './Loader';
 export { MainTitleText } from './Text/MainTitleText';
