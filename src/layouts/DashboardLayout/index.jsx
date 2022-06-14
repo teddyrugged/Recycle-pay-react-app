@@ -2,7 +2,7 @@ import React from 'react';
 import 'layouts/layout.css';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Text } from 'components';
+import { SideBar, Text } from 'components';
 import icon from './icon.svg';
 
 const hideLeftSidebar = () => {
@@ -19,7 +19,7 @@ export const DashboardLayout = ({ children, title, sidebarClassName, bodyClassNa
       <button type="button" onClick={() => showLeftSidebar()} className="show-sidebar">
         <img src={icon} alt="" className="left-slide-icon" />{' '}
       </button>
-      {/* {children} */}
+      <SideBar />
     </div>
     <div className={clsx('left-sidebar', sidebarClassName)}>
       <div className="sidebar-header">

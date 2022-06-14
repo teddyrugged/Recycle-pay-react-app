@@ -1,4 +1,6 @@
+/*Font awesome 6 CDN and Circular Font*/
 @import url('http://fonts.cdnfonts.com/css/circular-std');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 
 :root {
   /*COLORS*/
@@ -10,8 +12,10 @@
   --primary-80: #025002;
 
   /*neutral*/
+  --neutral-50: #18181880;
   --neutral-60: #18181899;
   --neutral-70: #181818b2;
+  --neutral-80: #181818b3;
 
   /*secondary*/
   --secondary-80: #d99426;

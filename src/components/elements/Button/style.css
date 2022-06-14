@@ -35,3 +35,29 @@
 .stretch {
   width: 100%;
 }
+
+.wrapper-google-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper-google-btn:active {
+  transform: scale(0.98);
+}
+
+.wrapper-logo {
+  position: absolute;
+  left: 147px;
+}
+
+.btn-text {
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 24px;
+  color: #025002;
+  margin-left: 60px;
+}
