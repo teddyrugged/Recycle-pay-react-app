@@ -19,19 +19,19 @@ export const Button = ({ text, btnType, className, btnStyle, stretch, round, chi
 );
 
 export const MainGreen = ({ text, children }) => (
-  <button type="submit" className="button-base stretch primary">
+  <Button type="submit" className="button-base stretch primary">
     {text || children}
-  </button>
+  </Button>
 );
 
-export const GoogleBtn = ({ text, children }) => (
+export const GoogleBtn = ({ text }) => (
   <div className="wrapper-google-btn">
     <div className="wrapper-logo">
       <GoogleIcon />
     </div>
-    <button type="submit" className="button-base stretch secondary" style={{ cursor: 'pointer' }}>
-      <span className="btn-text">{text || children}</span>
-    </button>
+    <Button type="submit" stretch btnType="secondary">
+      <span className="btn-text">{text}</span>
+    </Button>
   </div>
 );
 
@@ -54,6 +54,5 @@ MainGreen.propTypes = {
 };
 
 GoogleBtn.propTypes = {
-  children: PropTypes.node,
   text: PropTypes.string,
 };
