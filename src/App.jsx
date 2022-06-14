@@ -1,6 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import {
-  AnotherPage,
   SignUpPage,
   SignInPage,
   PasswordResetOne,
@@ -10,23 +10,66 @@ import {
   PasswordResetFive,
   OverviewPage,
 } from 'pages';
-import { SideBar } from 'components';
+
+import { ROUTES } from 'constants/routes';
+import { AuthLayout } from 'layouts';
+
+const authenticated = false;
+
+// for dashboard
+const PrivateOutlet = () => {
+  const location = useLocation();
+  const isAuth = authenticated;
+  if (!isAuth) {
+    return <Navigate to="/" state={{ from: location }} />;
+  }
+  return (
+    <div>
+      <Suspense fallback="loading...">
+        <Outlet />
+      </Suspense>
+    </div>
+  );
+};
+
+// for auth routes - login, signup forget password ...
+const ProtectedOutlet = () => {
+  const isAuth = authenticated;
+  return !isAuth ? (
+    <AuthLayout>
+      <Suspense fallback="loading...">
+        <Outlet />
+      </Suspense>
+    </AuthLayout>
+  ) : (
+    <Navigate to="/dashboard" />
+  );
+};
+
+const PasswordResetRoutes = () => <Outlet />;
 
 const App = () => (
-  <main>
-    <Routes>
-      <Route path="/" element={<SignUpPage />} />
-      <Route path="/signin" element={<SignInPage />} />
-      <Route path="/reset-1" element={<PasswordResetOne />} />
-      <Route path="/reset-2" element={<PasswordResetTwo />} />
-      <Route path="/reset-3" element={<PasswordResetThree />} />
-      <Route path="/reset-4" element={<PasswordResetFour />} />
-      <Route path="/reset-5" element={<PasswordResetFive />} />
-      <Route path="/page-2" element={<AnotherPage />} />
-      <Route path="/page-7" element={<SideBar />} />
-      <Route path="/dashboard/overview" element={<OverviewPage />} />
-    </Routes>
-  </main>
+  <Routes>
+    <Route path="/" element={<ProtectedOutlet />}>
+      <Route index element={<SignInPage />} />
+      <Route path={ROUTES.signIn.path} element={<SignInPage />} />
+      <Route path={ROUTES.signUp.path} element={<SignUpPage />} />
+
+      <Route path={ROUTES.resetPassword.path} element={<PasswordResetRoutes />}>
+        <Route index element={<PasswordResetOne />} />
+        <Route path="reset-1" element={<PasswordResetOne />} />
+        <Route path="reset-2" element={<PasswordResetTwo />} />
+        <Route path="reset-3" element={<PasswordResetThree />} />
+        <Route path="reset-4" element={<PasswordResetFour />} />
+        <Route path="reset-5" element={<PasswordResetFive />} />
+      </Route>
+    </Route>
+
+    <Route path={ROUTES.dashboard.path} element={<PrivateOutlet />}>
+      <Route path={ROUTES.overview.path} element={<OverviewPage />} />
+      <Route index element={<Navigate to={ROUTES.overview.path} />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
