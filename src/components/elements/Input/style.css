@@ -10,10 +10,7 @@
   width: 488px;
 }
 
-.md {
-  width: 424px;
-}
-
+.md,
 .sm {
   width: 244px;
 }
@@ -44,6 +41,7 @@
 
 .r-round {
   border-radius: 0 11px 11px 0;
+  border-left: 0px;
 }
 
 .full-round {
@@ -56,4 +54,29 @@
 
 .re-round {
   border-radius: 0 19px 19px 0;
+}
+
+.wrapper-phone-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral-80);
+}
+
+.phone-vline {
+  position: absolute;
+  left: 60px;
+  top: 8px;
+  color: var(--neutral-80);
 }
