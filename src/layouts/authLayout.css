@@ -11,10 +11,15 @@
   padding: 20px;
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 100px auto 160px auto;
 }
 
 .nav-content {
   display: flex;
   justify-content: center;
+  background: rgba(235, 254, 235, 0.4);
+  /* background: var(--primary-10); */
+  border-radius: 4px;
+  width: 600px;
+  margin: 20px auto;
 }
