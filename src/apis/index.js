@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 /**
  *
@@ -44,7 +45,7 @@ export const createClient = (options) => {
     async (error) => {
       // Any status codes that falls outside the range of 2xx cause this function to trigger
       // Do something with response error
-      let message = error?.response?.data?.message || error?.message || 'Unknown error';
+      let message = error?.response?.data?.data || error?.response?.data?.error || error?.message || 'Unknown error';
 
       if (typeof message !== 'string') {
         try {
@@ -55,11 +56,13 @@ export const createClient = (options) => {
       }
 
       if (!options || !options.disableActionsOnError) {
-        const originalRequest = error.config;
-        if (error.response?.status === 401 && originalRequest.url !== 'ENDPOINT_AUTH') {
-          // notifications.notifyError(message);
-        }
+        // const originalRequest = error.config;
+        // if (error.response?.status === 401 && originalRequest.url !== 'ENDPOINT_AUTH') {
+        //
+        // }
+        toast.error(message);
       }
+
       // await store.dispatch(logout());
 
       // notifications.notifyError(message, {

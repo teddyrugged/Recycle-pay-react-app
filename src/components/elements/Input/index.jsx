@@ -6,7 +6,7 @@ import { ReactComponent as Vline } from './vline.svg';
 
 export const Input = ({ inputType, styleType, type, placeholder, ...props }) => (
   <input
-    className={clsx(`${inputType || 'lg'} ${styleType}`, ['form-input'])}
+    className={clsx(`${inputType || 'lg'}`, styleType, ['form-input'], props.className)}
     type={type || 'text'}
     placeholder={placeholder}
     {...props}
@@ -21,9 +21,7 @@ export const HalfRightRound = ({ type, placeholder, ...props }) => (
   <input className="form-input md r-round" type={type || 'text'} placeholder={placeholder} {...props} />
 );
 
-export const FullRound = ({ type, placeholder, ...props }) => (
-  <input className="form-input lg full-round" type={type || 'text'} placeholder={placeholder} {...props} />
-);
+export const FullRound = (props) => <Input inputType="lg" styleType="full-round" {...props} />;
 
 export const PhoneInput = ({ type, placeholder, ...props }) => (
   <div className="wrapper-phone-input">

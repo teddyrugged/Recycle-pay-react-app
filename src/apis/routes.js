@@ -3,7 +3,7 @@ import recyclePayRequest from 'apis/index';
 const auth = {
   /**
    * Login User
-   * @param {{username: string, password: string}} data
+   * @param {{email: string, password: string}} data
    * @returns {Promise<AxiosResponse<any>>}
    */
   login: (data) => recyclePayRequest.post('/auth/login/', data),
