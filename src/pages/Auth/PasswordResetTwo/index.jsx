@@ -4,7 +4,7 @@ import { Text, Button } from 'components';
 export const PasswordResetTwo = () => (
   <div className="wrapper-container">
     <Text.Heading text="Reset Password" size={24} weight={500} level={1} />
-    <Text size={18} className="wrapper--text">
+    <Text size={13} className="wrapper--text">
       We’ve sent an email to you.
       <br /> Kindly activate your account from the link in the email sent.
     </Text>
