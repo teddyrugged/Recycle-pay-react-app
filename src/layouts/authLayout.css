@@ -33,6 +33,9 @@
   padding: 2rem;
   width: 90%;
 }
+.wrapper-container button {
+  cursor: pointer;
+}
 .wrapper--email,
 .wrapper--label--email,
 .wrapper--input--email,

@@ -1,13 +1,25 @@
 import React from 'react';
-import { Text, Button } from 'components';
+import { Text, Button, Input } from 'components';
 
 export const PasswordResetFour = () => (
   <div className="wrapper-container">
     <Text.Heading text="Reset Password" size={24} weight={500} level={1} />
-    <Text size={18} className="wrapper--text">
-      We’ve sent an email to you.
-      <br /> Kindly activate your account from the link in the email sent.
-    </Text>
-    <Button stretch btnType="primary" text="Resend Recovery Link" />
+    <div className="wrapper--email">
+      <div className="wrapper--label--email">
+        <Text text="Enter your new Password" />
+      </div>
+      <div className="wrapper--input--email">
+        <Input.FullRound name="password" type="password" placeholder="Abc123." />
+      </div>
+    </div>
+    <div className="wrapper--email">
+      <div className="wrapper--label--email">
+        <Text text="Re-type your new Password" />
+      </div>
+      <div className="wrapper--input--email">
+        <Input.FullRound name="confirmPassword" type="password" placeholder="Abc123." />
+      </div>
+    </div>
+    <Button stretch btnType="primary" text="Reset Password" />
   </div>
 );
