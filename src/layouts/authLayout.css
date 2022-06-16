@@ -49,4 +49,12 @@
   .nav-content {
     width: 100%;
   }
+
+  .button-base {
+    padding: 1rem !important;
+  }
+
+  .lg {
+    width: 100% !important;
+  }
 }
