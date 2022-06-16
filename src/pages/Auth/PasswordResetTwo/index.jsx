@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthLayout } from 'layouts';
-import { LabelText, FullDualRoundInput, ResetTitle, Text, Button } from 'components';
+import { ResetTitle, Text, Button } from 'components';
 
 export const PasswordResetTwo = () => (
   <AuthLayout>
@@ -11,12 +11,10 @@ export const PasswordResetTwo = () => (
     <Button stretch btnType="primary" text="Resend Recovery Link" />
     <ResetTitle />
     <div className="wrapper--email">
-      <div className="wrapper--label--email">
-        <LabelText text="Enter your Email Address" />
-      </div>
-      <div className="wrapper--input--email">
+      <div className="wrapper--label--email">{/* <LabelText text="Enter your Email Address" /> */}</div>
+      {/* <div className="wrapper--input--email">
         <FullDualRoundInput type="email" placeholder="" />
-      </div>
+      </div> */}
     </div>
     <Button stretch btnType="primary" text="Send Recovery Link" />
   </AuthLayout>
