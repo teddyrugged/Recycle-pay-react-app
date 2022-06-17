@@ -1,63 +1,62 @@
-import React from 'react';
-import { Text, Input, Button, Loader } from 'components';
+import React, { useState } from 'react';
+import { Text, Input, Button } from 'components';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { useFormik } from 'formik';
-import { VALIDATIONS } from 'constants/validations';
-import * as yup from 'yup';
+// import { useFormik } from 'formik';
+// import { VALIDATIONS } from 'constants/validations';
+// import * as yup from 'yup';
 import api from 'apis/routes';
 
-const validationSchema = yup.object({
-  email: VALIDATIONS.email,
-  password: VALIDATIONS.password,
-});
+const initialState = {
+  first_name: '',
+  last_name: '',
+  phonenumber: '',
+  email: '',
+  password: '',
+};
 
 export const SignUp = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstname: '',
-      lastname: '',
-      phonenumber: '',
-      email: '',
-      password: '',
-    },
-    validationSchema,
-    onSubmit: async (values, { setSubmitting }) => {
-      await api.auth.register(values);
-      setSubmitting(false);
-    },
-  });
+  const [formData, setFormData] = useState(initialState);
+  const onHandleChange = (e) => {
+    formData[e.target.name] = e.target.value;
+    setFormData(formData);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    const res = await api.auth.register(formData);
+    console.log(res);
+  };
 
   return (
     <div>
-      <form style={{ position: 'relative' }} onSubmit={formik.handleSubmit}>
-        <Loader open={formik.isSubmitting} />
+      <form style={{ position: 'relative' }} onSubmit={onSubmit}>
+        {/* <Loader open={formik.isSubmitting} /> */}
         <div className="signup-wrapper-signup-title">
           <Text.Heading text="Sign Up" size={24} weight={500} level={1} />
         </div>
         <div className="signup-wrapper-name">
           <div className="signup-col-firstname">
             <Text.Heading text="First Name" size={16} weight={450} level={3} />
-            <Input.HalfLeftRound type="text" placeholder="" onChange={formik.handleChange} />
+            <Input.HalfLeftRound name="first_name" type="text" placeholder="" onChange={onHandleChange} />
           </div>
           <div className="signup-col-lastname">
             <Text.Heading text="Last Name" size={16} weight={450} level={3} />
-            <Input.HalfRightRound type="text" placeholder="" onChange={formik.handleChange} />
+            <Input.HalfRightRound name="last_name" type="text" placeholder="" onChange={onHandleChange} />
           </div>
         </div>
         <div className="signup-wrapper-email">
           <Text.Heading text="Email Address" size={16} weight={450} level={3} />
-          <Input.FullRound type="email" placeholder="" onChange={formik.handleChange} />
-          <div>{formik.errors.email && formik.touched.email && formik.errors.email}</div>
+          <Input.FullRound type="email" name="email" placeholder="" onChange={onHandleChange} />
         </div>
         <div className="signup-wrapper-phone">
           <Text.Heading text="Phone Number" size={16} weight={450} level={3} />
-          <Input.PhoneInput placeholder="" onChange={formik.handleChange} />
+          <Input.PhoneInput name="phonenumber" placeholder="" onChange={onHandleChange} />
         </div>
         <div className="signup-wrapper-password">
           <Text.Heading text="Set a Password" size={16} weight={450} level={3} />
-          <Input.FullRound type="password" placeholder="" onChange={formik.handleChange} />
-          <div>{formik.errors.password && formik.touched.password && formik.errors.password}</div>
+          <Input.FullRound type="password" name="password" placeholder="" onChange={onHandleChange} />
         </div>
         <div className="signup-wrapper-button">
           <Button.MainGreen text="Sign Up" />
