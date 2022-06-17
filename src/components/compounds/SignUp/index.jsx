@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
 import { Text, Input, Button } from 'components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './style.css';
-// import { useFormik } from 'formik';
-// import { VALIDATIONS } from 'constants/validations';
-// import * as yup from 'yup';
 import api from 'apis/routes';
 
 const initialState = {
   first_name: '',
   last_name: '',
-  phonenumber: '',
   email: '',
   password: '',
 };
 
 export const SignUp = () => {
   const [formData, setFormData] = useState(initialState);
+  const navigate = useNavigate();
   const onHandleChange = (e) => {
     formData[e.target.name] = e.target.value;
     setFormData(formData);
@@ -24,15 +22,24 @@ export const SignUp = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    const res = await api.auth.register(formData);
+    const formData2 = new FormData();
+    formData2.append('first_name', formData.first_name);
+    formData2.append('last_name', formData.last_name);
+    formData2.append('email', formData.email);
+    formData2.append('password', formData.password);
+    console.log(formData2);
+    const res = await api.auth.register(formData2);
+    if (res.status === 201) {
+      navigate('/login');
+    } else {
+      toast.success('Email already registered');
+    }
     console.log(res);
   };
 
   return (
     <div>
       <form style={{ position: 'relative' }} onSubmit={onSubmit}>
-        {/* <Loader open={formik.isSubmitting} /> */}
         <div className="signup-wrapper-signup-title">
           <Text.Heading text="Sign Up" size={24} weight={500} level={1} />
         </div>
