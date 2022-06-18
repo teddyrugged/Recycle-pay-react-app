@@ -6,7 +6,10 @@ export const ROUTES = {
     path: 'login',
   },
   resetPassword: {
-    path: 'reset-password',
+    path: '/password',
+  },
+  forgotPassword: {
+    path: 'forgot-password',
   },
   dashboard: {
     path: '/dashboard',

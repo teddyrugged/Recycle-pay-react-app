@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { ROUTES } from 'constants/routes';
 import { ReactComponent as Hline } from './hline.svg';
+
+// import {forgotPassword} from AUTH_ACTIONS;
 
 // import clsx from 'clsx';
 
@@ -59,7 +63,9 @@ export const RememberMe = ({ ...props }) => (
   >
     <input style={{ margin: '0 8px' }} type="checkbox" />
     <p style={{ marginRight: 'auto' }}>Remember me</p>
-    <p style={{ marginRight: '8px' }}>Forgot Password?</p>
+    <Link to={ROUTES.forgotPassword.path}>
+      <p style={{ marginRight: '8px' }}>Forgot Password?</p>
+    </Link>
   </div>
 );
 

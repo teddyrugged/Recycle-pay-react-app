@@ -7,7 +7,6 @@ const auth = {
    * @returns {Promise<AxiosResponse<any>>}
    */
   login: (data) => recyclePayRequest.post('/auth/login/', data),
-  forgetPassword: () => {},
   /**
    * Register User
    * @param {{
@@ -19,6 +18,7 @@ const auth = {
    * @returns {Promise<AxiosResponse<{data: {name: string }}>>}
    */
   register: (data) => recyclePayRequest.post('/auth/register/', data),
+  forgotPassword: (email) => recyclePayRequest.post('/auth/forgot-password', email),
 };
 
 const other = {};

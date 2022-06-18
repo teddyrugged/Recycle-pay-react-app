@@ -56,10 +56,10 @@ const App = () => (
         <Route index element={<SignInPage />} />
         <Route path={ROUTES.signIn.path} element={<SignInPage />} />
         <Route path={ROUTES.signUp.path} element={<SignUpPage />} />
+        <Route path={ROUTES.forgotPassword.path} element={<PasswordResetOne />} />
 
         <Route path={ROUTES.resetPassword.path} element={<PasswordResetRoutes />}>
           <Route index element={<PasswordResetOne />} />
-          <Route path="reset-1" element={<PasswordResetOne />} />
           <Route path="reset-2" element={<PasswordResetTwo />} />
           <Route path="reset-3" element={<PasswordResetThree />} />
           <Route path="reset-4" element={<PasswordResetFour />} />
