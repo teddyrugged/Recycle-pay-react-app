@@ -25,11 +25,13 @@ const PrivateOutlet = () => {
     return <Navigate to="/" state={{ from: location }} />;
   }
   return (
+    // <DashboardLayout>
     <div>
       <Suspense fallback="loading...">
         <Outlet />
       </Suspense>
     </div>
+    // </DashboardLayout>
   );
 };
 
